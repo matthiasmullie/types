@@ -22,7 +22,7 @@ docs:
 test:
 	VERSION=$$(echo "$(PHP)-cli" | sed "s/^-//");\
 	test $$(docker images -q matthiasmullie/types:$$VERSION) || docker build -t matthiasmullie/types:$$VERSION . --build-arg VERSION=$$VERSION;\
-	docker run -v $$(pwd)/src:/var/www/src -v $$(pwd)/tests:/var/www/tests -v $$(pwd)/phpunit.xml:/var/www/phpunit.xml matthiasmullie/types:$$VERSION vendor/bin/phpunit
+	docker run -v $$(pwd)/src:/var/www/src -v $$(pwd)/tests:/var/www/tests -v $$(pwd)/phpunit.xml:/var/www/phpunit.xml matthiasmullie/types:$$VERSION env XDEBUG_MODE=off vendor/bin/phpunit
 
 coverage:
 	VERSION=$$(echo "$(PHP)-cli" | sed "s/^-//");\

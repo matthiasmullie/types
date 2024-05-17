@@ -1,10 +1,10 @@
 # Types
 
-[![Build status](https://img.shields.io/github/actions/workflow/status/matthiasmullie/types/test.yml?branch=master&style=flat-square)](https://github.com/matthiasmullie/types/actions/workflows/test.yml)
+[![Build status](https://img.shields.io/github/actions/workflow/status/matthiasmullie/types/test.yml?branch=main&style=flat-square)](https://github.com/matthiasmullie/types/actions/workflows/test.yml)
 [![Code coverage](https://img.shields.io/codecov/c/gh/matthiasmullie/types?style=flat-square)](https://codecov.io/gh/matthiasmullie/types)
 [![Latest version](https://img.shields.io/packagist/v/matthiasmullie/types?style=flat-square)](https://packagist.org/packages/matthiasmullie/types)
 [![Downloads total](https://img.shields.io/packagist/dt/matthiasmullie/types?style=flat-square)](https://packagist.org/packages/matthiasmullie/types)
-[![License](https://img.shields.io/packagist/l/matthiasmullie/types?style=flat-square)](https://github.com/matthiasmullie/types/blob/master/LICENSE)
+[![License](https://img.shields.io/packagist/l/matthiasmullie/types?style=flat-square)](https://github.com/matthiasmullie/types/blob/main/LICENSE)
 
 
 ## Installation
