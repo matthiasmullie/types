@@ -27,7 +27,7 @@ test:
 coverage:
 	VERSION=$$(echo "$(PHP)-cli" | sed "s/^-//");\
 	test $$(docker images -q matthiasmullie/types:$$VERSION) || docker build -t matthiasmullie/types:$$VERSION . --build-arg VERSION=$$VERSION;\
-	docker run -v $$(pwd)/src:/var/www/src -v $$(pwd)/tests:/var/www/tests -v $$(pwd)/build:/var/www/build -v $$(pwd)/phpunit.xml:/var/www/phpunit.xml matthiasmullie/types:$$VERSION env XDEBUG_MODE=off php -d pcov.enabled=1 -d pcov.directory="src,html" vendor/bin/phpunit --coverage-clover build/coverage-$(PHP).clover
+	docker run -v $$(pwd)/src:/var/www/src -v $$(pwd)/tests:/var/www/tests -v $$(pwd)/build:/var/www/build -v $$(pwd)/phpunit.xml:/var/www/phpunit.xml matthiasmullie/types:$$VERSION env XDEBUG_MODE=off php -d pcov.enabled=1 -d pcov.directory="src" vendor/bin/phpunit --coverage-clover build/coverage-$(PHP).clover
 
 profile:
 	VERSION=$$(echo "$(PHP)-cli" | sed "s/^-//");\
