@@ -9,15 +9,20 @@ readonly class Numeric extends AbstractType
     #[\Override]
     public function __invoke(mixed $value): int|float
     {
-        if (is_int($value) || is_float($value)) {
-            return $value;
+        try {
+            $scalar = $this->getScalarValue($value);
+
+            if (is_int($scalar) || is_float($scalar)) {
+                return $scalar;
+            }
+
+            $number = filter_var($scalar, FILTER_VALIDATE_INT) ?: filter_var($scalar, FILTER_VALIDATE_FLOAT);
+            if ($number !== false) {
+                return $number;
+            }
+        } catch (InvalidArgumentException) {
         }
 
-        $number = filter_var($value, FILTER_VALIDATE_INT) ?: filter_var($value, FILTER_VALIDATE_FLOAT);
-        if ($number === false) {
-            throw new InvalidArgumentException('Not numeric: ' . json_encode($value));
-        }
-
-        return $number;
+        throw new InvalidArgumentException('Not numeric: ' . json_encode($value));
     }
 }

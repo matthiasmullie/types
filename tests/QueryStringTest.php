@@ -24,7 +24,7 @@ class QueryStringTest extends TypeTestCase
             ],
             [
                 AnEnum::Two,
-                new InvalidArgumentException('Not query string: "two"'),
+                'two=',
             ],
             [
                 null,

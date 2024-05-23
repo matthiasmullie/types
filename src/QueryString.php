@@ -14,17 +14,21 @@ readonly class QueryString extends AbstractType
     #[\Override]
     public function __invoke(mixed $value): mixed
     {
-        if (!is_string($value)) {
-            throw new InvalidArgumentException('Not query string: ' . json_encode($value));
+        try {
+            $scalar = $this->getScalarValue($value);
+
+            if (is_string($scalar)) {
+                parse_str($scalar, $parsed);
+
+                if (!empty($parsed) || trim($scalar) === '') {
+                    $result = ($this->type)($parsed);
+
+                    return urldecode(http_build_query($result));
+                }
+            }
+        } catch (InvalidArgumentException) {
         }
 
-        parse_str($value, $parsed);
-        if (empty($parsed) && trim($value) !== '') {
-            throw new InvalidArgumentException('Not query string: ' . json_encode($value));
-        }
-
-        $result = ($this->type)($parsed);
-
-        return urldecode(http_build_query($result));
+        throw new InvalidArgumentException('Not query string: ' . json_encode($value));
     }
 }

@@ -9,15 +9,20 @@ readonly class Integer extends AbstractType
     #[\Override]
     public function __invoke(mixed $value): int
     {
-        if (is_int($value)) {
-            return $value;
+        try {
+            $scalar = $this->getScalarValue($value);
+
+            if (is_int($scalar)) {
+                return $scalar;
+            }
+
+            $int = filter_var($scalar, FILTER_VALIDATE_INT);
+            if ($int !== false) {
+                return $int;
+            }
+        } catch (InvalidArgumentException) {
         }
 
-        $int = filter_var($value, FILTER_VALIDATE_INT);
-        if ($int === false) {
-            throw new InvalidArgumentException('Not an integer: ' . json_encode($value));
-        }
-
-        return $int;
+        throw new InvalidArgumentException('Not an integer: ' . json_encode($value));
     }
 }

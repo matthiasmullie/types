@@ -18,4 +18,21 @@ abstract readonly class AbstractType implements TypeInterface
             return false;
         }
     }
+
+    public function getScalarValue(mixed $value): int|float|string|bool
+    {
+        if (is_scalar($value)) {
+            return $value;
+        }
+
+        if ($value instanceof \BackedEnum) {
+            return $value->value;
+        }
+
+        if (is_object($value) && method_exists($value, '__toString')) {
+            return (string) $value;
+        }
+
+        throw new InvalidArgumentException('Not scalar: ' . json_encode($value));
+    }
 }

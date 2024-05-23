@@ -24,7 +24,7 @@ class TextTest extends TypeTestCase
             ],
             [
                 AnEnum::Two,
-                new InvalidArgumentException('Not text: "two"'),
+                'two',
             ],
             [
                 null,

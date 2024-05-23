@@ -24,7 +24,7 @@ class AlphanumericTest extends TypeTestCase
             ],
             [
                 AnEnum::Two,
-                new InvalidArgumentException('Not alphanumeric: "two"'),
+                'two',
             ],
             [
                 null,

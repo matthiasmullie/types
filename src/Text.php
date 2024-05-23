@@ -6,17 +6,12 @@ namespace MatthiasMullie\Types;
 
 readonly class Text extends AbstractType
 {
-    public function test(mixed $value): bool
-    {
-        return (is_object($value) && method_exists($value, '__toString')) || is_scalar($value);
-    }
-
     public function __invoke(mixed $value): string
     {
-        if (!$this->test($value)) {
+        try {
+            return (string) $this->getScalarValue($value);
+        } catch (InvalidArgumentException) {
             throw new InvalidArgumentException('Not text: ' . json_encode($value));
         }
-
-        return (string) $value;
     }
 }

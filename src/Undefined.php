@@ -9,10 +9,19 @@ readonly class Undefined extends AbstractType
     #[\Override]
     public function __invoke(mixed $value): null
     {
-        if ($value) {
-            throw new InvalidArgumentException('Not undefined: ' . json_encode($value));
+        if (!$value) {
+            return null;
         }
 
-        return null;
+        try {
+            $scalar = $this->getScalarValue($value);
+
+            if (!$scalar) {
+                return null;
+            }
+        } catch (InvalidArgumentException) {
+        }
+
+        throw new InvalidArgumentException('Not undefined: ' . json_encode($value));
     }
 }

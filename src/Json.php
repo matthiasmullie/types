@@ -14,17 +14,21 @@ readonly class Json extends AbstractType
     #[\Override]
     public function __invoke(mixed $value): mixed
     {
-        if (!is_string($value)) {
-            throw new InvalidArgumentException('Not JSON: ' . json_encode($value));
+        try {
+            $scalar = $this->getScalarValue($value);
+
+            if (is_string($scalar)) {
+                $decoded = json_decode($scalar, true);
+
+                if ($decoded !== null || $scalar === 'null') {
+                    $result = ($this->type)($decoded);
+
+                    return json_encode($result);
+                }
+            }
+        } catch (InvalidArgumentException) {
         }
 
-        $decoded = json_decode($value, true);
-        if ($decoded === null && $value !== 'null') {
-            throw new InvalidArgumentException('Not JSON: ' . json_encode($value));
-        }
-
-        $result = ($this->type)($decoded);
-
-        return json_encode($result);
+        throw new InvalidArgumentException('Not JSON: ' . json_encode($value));
     }
 }

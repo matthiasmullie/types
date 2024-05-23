@@ -9,11 +9,16 @@ readonly class Email extends AbstractType
     #[\Override]
     public function __invoke(mixed $value): string
     {
-        $email = filter_var($value, FILTER_VALIDATE_EMAIL);
-        if ($email === false) {
-            throw new InvalidArgumentException('Not an email: ' . json_encode($value));
+        try {
+            $scalar = $this->getScalarValue($value);
+
+            $email = filter_var($scalar, FILTER_VALIDATE_EMAIL);
+            if ($email !== false) {
+                return $email;
+            }
+        } catch (InvalidArgumentException) {
         }
 
-        return $email;
+        throw new InvalidArgumentException('Not an email: ' . json_encode($value));
     }
 }

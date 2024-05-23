@@ -24,7 +24,7 @@ class UrlEncodedTest extends TypeTestCase
             ],
             [
                 AnEnum::Two,
-                new InvalidArgumentException('Not url encoded: "two"'),
+                'two',
             ],
             [
                 null,

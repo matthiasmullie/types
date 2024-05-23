@@ -15,18 +15,6 @@ readonly class OneOf extends AbstractType
     }
 
     #[\Override]
-    public function test(mixed $value): bool
-    {
-        foreach ($this->types as $type) {
-            if ($type->test($value)) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-    #[\Override]
     public function __invoke(mixed $value): mixed
     {
         foreach ($this->types as $type) {
