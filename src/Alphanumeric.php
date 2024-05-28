@@ -11,8 +11,8 @@ readonly class Alphanumeric extends AbstractType
         try {
             $scalar = $this->getScalarValue($value);
             if (
-                !is_bool($scalar) &&
-                preg_match('/^[a-z0-9]+$/i', (string) $scalar) === 1
+                !is_bool($scalar)
+                && preg_match('/^[a-z0-9]+$/i', (string) $scalar) === 1
             ) {
                 return (string) $scalar;
             }

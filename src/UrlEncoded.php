@@ -16,20 +16,22 @@ readonly class UrlEncoded extends AbstractType
     {
         try {
             $scalar = $this->getScalarValue($value);
-
-            if (is_string($scalar)) {
-                $decoded = urldecode($scalar);
-                $reencoded = urlencode($decoded);
-
-                if ($reencoded === $scalar) {
-                    $result = ($this->type)($decoded);
-
-                    return urlencode($result);
-                }
-            }
         } catch (InvalidArgumentException) {
+            throw new InvalidArgumentException('Not url encoded: ' . json_encode($value));
         }
 
-        throw new InvalidArgumentException('Not url encoded: ' . json_encode($value));
+        if (!is_string($scalar)) {
+            throw new InvalidArgumentException('Not url encoded: ' . json_encode($value));
+        }
+
+        $decoded = urldecode($scalar);
+        $reencoded = urlencode($decoded);
+        if ($reencoded !== $scalar) {
+            throw new InvalidArgumentException('Not url encoded: ' . json_encode($value));
+        }
+
+        $result = ($this->type)($decoded);
+
+        return urlencode($result);
     }
 }

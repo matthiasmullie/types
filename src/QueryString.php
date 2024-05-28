@@ -16,19 +16,21 @@ readonly class QueryString extends AbstractType
     {
         try {
             $scalar = $this->getScalarValue($value);
-
-            if (is_string($scalar)) {
-                parse_str($scalar, $parsed);
-
-                if (!empty($parsed) || trim($scalar) === '') {
-                    $result = ($this->type)($parsed);
-
-                    return urldecode(http_build_query($result));
-                }
-            }
         } catch (InvalidArgumentException) {
+            throw new InvalidArgumentException('Not query string: ' . json_encode($value));
         }
 
-        throw new InvalidArgumentException('Not query string: ' . json_encode($value));
+        if (!is_string($scalar)) {
+            throw new InvalidArgumentException('Not query string: ' . json_encode($value));
+        }
+
+        parse_str($scalar, $parsed);
+        if (empty($parsed) && trim($scalar) !== '') {
+            throw new InvalidArgumentException('Not query string: ' . json_encode($value));
+        }
+
+        $result = ($this->type)($parsed);
+
+        return urldecode(http_build_query($result));
     }
 }

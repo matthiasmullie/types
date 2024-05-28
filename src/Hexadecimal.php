@@ -11,8 +11,8 @@ readonly class Hexadecimal extends AbstractType
         try {
             $scalar = $this->getScalarValue($value);
             if (
-                !is_bool($scalar) &&
-                preg_match('/^[a-f0-9]+$/i', (string) $scalar) === 1
+                !is_bool($scalar)
+                && preg_match('/^[a-f0-9]+$/i', (string) $scalar) === 1
             ) {
                 return (string) $scalar;
             }
