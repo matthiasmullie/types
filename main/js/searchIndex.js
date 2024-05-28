@@ -33,7 +33,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Alphanumeric\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
-            "summary": "",
+            "summary": "Invoke\u0020the\u0020type\u0020on\u0020given\u0020input\u003B\u0020converting\/casting\u0020it\u0020as\u0020possible,\nor\u0020throwing\u0020an\u0020exception\u0020upon\u0020failure.",
             "url": "classes/MatthiasMullie-Types-Alphanumeric.html#method___invoke"
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Any",
@@ -43,7 +43,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Any\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
-            "summary": "",
+            "summary": "Invoke\u0020the\u0020type\u0020on\u0020given\u0020input\u003B\u0020converting\/casting\u0020it\u0020as\u0020possible,\nor\u0020throwing\u0020an\u0020exception\u0020upon\u0020failure.",
             "url": "classes/MatthiasMullie-Types-Any.html#method___invoke"
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Boolean",
@@ -53,7 +53,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Boolean\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
-            "summary": "",
+            "summary": "Invoke\u0020the\u0020type\u0020on\u0020given\u0020input\u003B\u0020converting\/casting\u0020it\u0020as\u0020possible,\nor\u0020throwing\u0020an\u0020exception\u0020upon\u0020failure.",
             "url": "classes/MatthiasMullie-Types-Boolean.html#method___invoke"
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Coordinate",
@@ -63,7 +63,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Coordinate\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
-            "summary": "",
+            "summary": "Invoke\u0020the\u0020type\u0020on\u0020given\u0020input\u003B\u0020converting\/casting\u0020it\u0020as\u0020possible,\nor\u0020throwing\u0020an\u0020exception\u0020upon\u0020failure.",
             "url": "classes/MatthiasMullie-Types-Coordinate.html#method___invoke"
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Double",
@@ -73,7 +73,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Double\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
-            "summary": "",
+            "summary": "Invoke\u0020the\u0020type\u0020on\u0020given\u0020input\u003B\u0020converting\/casting\u0020it\u0020as\u0020possible,\nor\u0020throwing\u0020an\u0020exception\u0020upon\u0020failure.",
             "url": "classes/MatthiasMullie-Types-Double.html#method___invoke"
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Email",
@@ -83,7 +83,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Email\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
-            "summary": "",
+            "summary": "Invoke\u0020the\u0020type\u0020on\u0020given\u0020input\u003B\u0020converting\/casting\u0020it\u0020as\u0020possible,\nor\u0020throwing\u0020an\u0020exception\u0020upon\u0020failure.",
             "url": "classes/MatthiasMullie-Types-Email.html#method___invoke"
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Enum",
@@ -98,7 +98,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Enum\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
-            "summary": "",
+            "summary": "Invoke\u0020the\u0020type\u0020on\u0020given\u0020input\u003B\u0020converting\/casting\u0020it\u0020as\u0020possible,\nor\u0020throwing\u0020an\u0020exception\u0020upon\u0020failure.",
             "url": "classes/MatthiasMullie-Types-Enum.html#method___invoke"
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Hexadecimal",
@@ -108,7 +108,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Hexadecimal\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
-            "summary": "",
+            "summary": "Invoke\u0020the\u0020type\u0020on\u0020given\u0020input\u003B\u0020converting\/casting\u0020it\u0020as\u0020possible,\nor\u0020throwing\u0020an\u0020exception\u0020upon\u0020failure.",
             "url": "classes/MatthiasMullie-Types-Hexadecimal.html#method___invoke"
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Integer",
@@ -118,7 +118,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Integer\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
-            "summary": "",
+            "summary": "Invoke\u0020the\u0020type\u0020on\u0020given\u0020input\u003B\u0020converting\/casting\u0020it\u0020as\u0020possible,\nor\u0020throwing\u0020an\u0020exception\u0020upon\u0020failure.",
             "url": "classes/MatthiasMullie-Types-Integer.html#method___invoke"
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\InvalidArgumentException",
@@ -138,7 +138,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Json\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
-            "summary": "",
+            "summary": "Invoke\u0020the\u0020type\u0020on\u0020given\u0020input\u003B\u0020converting\/casting\u0020it\u0020as\u0020possible,\nor\u0020throwing\u0020an\u0020exception\u0020upon\u0020failure.",
             "url": "classes/MatthiasMullie-Types-Json.html#method___invoke"
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Map",
@@ -153,7 +153,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Map\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
-            "summary": "",
+            "summary": "Invoke\u0020the\u0020type\u0020on\u0020given\u0020input\u003B\u0020converting\/casting\u0020it\u0020as\u0020possible,\nor\u0020throwing\u0020an\u0020exception\u0020upon\u0020failure.",
             "url": "classes/MatthiasMullie-Types-Map.html#method___invoke"
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Numeric",
@@ -163,7 +163,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Numeric\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
-            "summary": "",
+            "summary": "Invoke\u0020the\u0020type\u0020on\u0020given\u0020input\u003B\u0020converting\/casting\u0020it\u0020as\u0020possible,\nor\u0020throwing\u0020an\u0020exception\u0020upon\u0020failure.",
             "url": "classes/MatthiasMullie-Types-Numeric.html#method___invoke"
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\OneOf",
@@ -178,7 +178,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\OneOf\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
-            "summary": "",
+            "summary": "Invoke\u0020the\u0020type\u0020on\u0020given\u0020input\u003B\u0020converting\/casting\u0020it\u0020as\u0020possible,\nor\u0020throwing\u0020an\u0020exception\u0020upon\u0020failure.",
             "url": "classes/MatthiasMullie-Types-OneOf.html#method___invoke"
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Optional",
@@ -193,7 +193,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Optional\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
-            "summary": "",
+            "summary": "Invoke\u0020the\u0020type\u0020on\u0020given\u0020input\u003B\u0020converting\/casting\u0020it\u0020as\u0020possible,\nor\u0020throwing\u0020an\u0020exception\u0020upon\u0020failure.",
             "url": "classes/MatthiasMullie-Types-Optional.html#method___invoke"
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\QueryString",
@@ -208,7 +208,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\QueryString\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
-            "summary": "",
+            "summary": "Invoke\u0020the\u0020type\u0020on\u0020given\u0020input\u003B\u0020converting\/casting\u0020it\u0020as\u0020possible,\nor\u0020throwing\u0020an\u0020exception\u0020upon\u0020failure.",
             "url": "classes/MatthiasMullie-Types-QueryString.html#method___invoke"
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Sequence",
@@ -223,7 +223,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Sequence\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
-            "summary": "",
+            "summary": "Invoke\u0020the\u0020type\u0020on\u0020given\u0020input\u003B\u0020converting\/casting\u0020it\u0020as\u0020possible,\nor\u0020throwing\u0020an\u0020exception\u0020upon\u0020failure.",
             "url": "classes/MatthiasMullie-Types-Sequence.html#method___invoke"
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Sha1",
@@ -233,7 +233,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Sha1\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
-            "summary": "",
+            "summary": "Invoke\u0020the\u0020type\u0020on\u0020given\u0020input\u003B\u0020converting\/casting\u0020it\u0020as\u0020possible,\nor\u0020throwing\u0020an\u0020exception\u0020upon\u0020failure.",
             "url": "classes/MatthiasMullie-Types-Sha1.html#method___invoke"
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Sha512",
@@ -243,7 +243,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Sha512\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
-            "summary": "",
+            "summary": "Invoke\u0020the\u0020type\u0020on\u0020given\u0020input\u003B\u0020converting\/casting\u0020it\u0020as\u0020possible,\nor\u0020throwing\u0020an\u0020exception\u0020upon\u0020failure.",
             "url": "classes/MatthiasMullie-Types-Sha512.html#method___invoke"
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Text",
@@ -253,7 +253,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Text\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
-            "summary": "",
+            "summary": "Invoke\u0020the\u0020type\u0020on\u0020given\u0020input\u003B\u0020converting\/casting\u0020it\u0020as\u0020possible,\nor\u0020throwing\u0020an\u0020exception\u0020upon\u0020failure.",
             "url": "classes/MatthiasMullie-Types-Text.html#method___invoke"
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\TypeInterface",
@@ -278,7 +278,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Undefined\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
-            "summary": "",
+            "summary": "Invoke\u0020the\u0020type\u0020on\u0020given\u0020input\u003B\u0020converting\/casting\u0020it\u0020as\u0020possible,\nor\u0020throwing\u0020an\u0020exception\u0020upon\u0020failure.",
             "url": "classes/MatthiasMullie-Types-Undefined.html#method___invoke"
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Url",
@@ -288,7 +288,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\Url\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
-            "summary": "",
+            "summary": "Invoke\u0020the\u0020type\u0020on\u0020given\u0020input\u003B\u0020converting\/casting\u0020it\u0020as\u0020possible,\nor\u0020throwing\u0020an\u0020exception\u0020upon\u0020failure.",
             "url": "classes/MatthiasMullie-Types-Url.html#method___invoke"
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\UrlEncoded",
@@ -303,7 +303,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\MatthiasMullie\\Types\\UrlEncoded\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
-            "summary": "",
+            "summary": "Invoke\u0020the\u0020type\u0020on\u0020given\u0020input\u003B\u0020converting\/casting\u0020it\u0020as\u0020possible,\nor\u0020throwing\u0020an\u0020exception\u0020upon\u0020failure.",
             "url": "classes/MatthiasMullie-Types-UrlEncoded.html#method___invoke"
         },                {
             "fqsen": "\\",
