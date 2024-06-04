@@ -1,4 +1,6 @@
 PHP ?=
+TEST ?=
+FILTER ?= .
 
 docs:
 	docker run --rm -v $$(pwd)/docs:/data/docs -w /data php:cli bash -c "\
@@ -22,17 +24,17 @@ docs:
 test:
 	VERSION=$$(echo "$(PHP)-cli" | sed "s/^-//");\
 	test $$(docker images -q matthiasmullie/types:$$VERSION) || docker build -t matthiasmullie/types:$$VERSION . --build-arg VERSION=$$VERSION;\
-	docker run -v $$(pwd)/src:/var/www/src -v $$(pwd)/tests:/var/www/tests -v $$(pwd)/phpunit.xml:/var/www/phpunit.xml matthiasmullie/types:$$VERSION env XDEBUG_MODE=off vendor/bin/phpunit
+	docker run -v $$(pwd)/src:/var/www/src -v $$(pwd)/tests:/var/www/tests -v $$(pwd)/phpunit.xml:/var/www/phpunit.xml matthiasmullie/types:$$VERSION env XDEBUG_MODE=off vendor/bin/phpunit $(TEST) --filter $(FILTER)
 
 coverage:
 	VERSION=$$(echo "$(PHP)-cli" | sed "s/^-//");\
 	test $$(docker images -q matthiasmullie/types:$$VERSION) || docker build -t matthiasmullie/types:$$VERSION . --build-arg VERSION=$$VERSION;\
-	docker run -v $$(pwd)/src:/var/www/src -v $$(pwd)/tests:/var/www/tests -v $$(pwd)/build:/var/www/build -v $$(pwd)/phpunit.xml:/var/www/phpunit.xml matthiasmullie/types:$$VERSION env XDEBUG_MODE=off php -d pcov.enabled=1 -d pcov.directory="src" vendor/bin/phpunit --coverage-clover build/coverage-$(PHP).clover
+	docker run -v $$(pwd)/src:/var/www/src -v $$(pwd)/tests:/var/www/tests -v $$(pwd)/build:/var/www/build -v $$(pwd)/phpunit.xml:/var/www/phpunit.xml matthiasmullie/types:$$VERSION env XDEBUG_MODE=off php -d pcov.enabled=1 -d pcov.directory="src" vendor/bin/phpunit $(TEST) --filter $(FILTER) --coverage-clover build/coverage-$(PHP).clover
 
 profile:
 	VERSION=$$(echo "$(PHP)-cli" | sed "s/^-//");\
 	test $$(docker images -q matthiasmullie/types:$$VERSION) || docker build -t matthiasmullie/types:$$VERSION . --build-arg VERSION=$$VERSION;\
-	docker run -v $$(pwd)/src:/var/www/src -v $$(pwd)/tests:/var/www/tests -v $$(pwd)/build:/var/www/build -v $$(pwd)/phpunit.xml:/var/www/phpunit.xml matthiasmullie/types:$$VERSION env XDEBUG_MODE=off php -d xdebug.mode=profile -d xdebug.profiler_output_name=cachegrind.out -d xdebug.output_dir=build vendor/bin/phpunit
+	docker run -v $$(pwd)/src:/var/www/src -v $$(pwd)/tests:/var/www/tests -v $$(pwd)/build:/var/www/build -v $$(pwd)/phpunit.xml:/var/www/phpunit.xml matthiasmullie/types:$$VERSION env XDEBUG_MODE=off php -d xdebug.mode=profile -d xdebug.profiler_output_name=cachegrind.out -d xdebug.output_dir=build vendor/bin/phpunit $(TEST) --filter $(FILTER)
 
 format:
 	VERSION=$$(echo "$(PHP)-cli" | sed "s/^-//");\
@@ -41,7 +43,9 @@ format:
 
 composer_update:
 	VERSION=$$(echo "$(PHP)-cli" | sed "s/^-//");\
-	test $$(docker images -q matthiasmullie/types:$$VERSION) || docker build -t matthiasmullie/types:$$VERSION . --build-arg VERSION=$$VERSION;\
+	docker image rm -f matthiasmullie/types:$$VERSION;\
+	echo '{}' > composer.lock;\
+	docker build -t matthiasmullie/types:$$VERSION . --build-arg VERSION=$$VERSION;\
 	docker run -v $$(pwd)/src:/var/www/src -v $$(pwd)/tests:/var/www/tests -v $$(pwd)/composer.json:/var/www/composer.json -v $$(pwd)/composer.lock:/var/www/composer.lock -v $$(pwd)/vendor:/var/www/vendor matthiasmullie/types:$$VERSION composer update
 
 .PHONY: docs
